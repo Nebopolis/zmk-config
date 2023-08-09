@@ -7,17 +7,28 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-// Layer definitions
+&kscan0 {
+    input-gpios
+    = <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    ;
+};
 
-#define BASE 0
-#define SYM 1
-#define EXT 2
-#define FNC 3
-#define SYM2 4
-#define ACCENT 5
-#define SETTINGS 6
-
-// -----------------
 
 &mt {
     //  flavor = "tap-preferred";
